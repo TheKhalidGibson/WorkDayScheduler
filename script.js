@@ -52,8 +52,8 @@ let containerMain = document.querySelector("#containerMain")
 // useful when saving the description in local storage?
 //
 
-let temp1 = "9"
-let time = "hour-9"
+let temp1 = "saveBtn"
+let time = "hour"
 
 // this event listener saves data
 containerMain.addEventListener("click", function (event) {
@@ -63,12 +63,12 @@ containerMain.addEventListener("click", function (event) {
 
     let hourClicked = event.target.getAttribute("data-time");
 
-    console.log("hour clicked", typeof hourClicked)
+      console.log("hour clicked", typeof hourClicked)
 
     let hourTa = event.target.previousElementSibling
 
 
-    console.log("hour Ta", hourTa.value)
+      console.log("hour Ta", hourTa.value)
 
     localStorage.setItem(hourClicked, hourTa.value)
     
@@ -80,9 +80,6 @@ containerMain.addEventListener("click", function (event) {
   else if (event.target.matches("i")){
 
    
-
-   
-
    
     
     localStorage.setItem(temp1.dataset.time, temp1.parentElement.previousElementSibling.value)
