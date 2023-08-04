@@ -52,6 +52,9 @@ let containerMain = document.querySelector("#containerMain")
 // useful when saving the description in local storage?
 //
 
+let temp1 = "9"
+let time = "hour-9"
+
 // this event listener saves data
 containerMain.addEventListener("click", function (event) {
 
@@ -64,21 +67,39 @@ containerMain.addEventListener("click", function (event) {
 
     let hourTa = event.target.previousElementSibling
 
+
     console.log("hour Ta", hourTa.value)
+
     localStorage.setItem(hourClicked, hourTa.value)
+    
+    
   } 
 
   //attempting to recreate the storing process for the i class.. the fa fa save icon
 
-//   else if (event.target.matches("i")){
+  else if (event.target.matches("i")){
+
+   
+
+   
+
+   
+    
+    localStorage.setItem(temp1.dataset.time, temp1.parentElement.previousElementSibling.value)
+
+
+  }
+
+    // let temp1 = event.target.getAttribute("9")
+
+    // temp1.parentElement.previousElementSibling.value
 
     
-//     let iClass = 
 
 
-//   }
+  
 
-// })
+})
 
 
   // TODO: Add code to apply the past, present, or future class to each time
@@ -86,6 +107,12 @@ containerMain.addEventListener("click", function (event) {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+
+    // if (parseInt(document.querySelectorAll(".row")[i].dataset.time) < dayjs().hour()){
+
+
+
+    // };
 
   
 
@@ -97,3 +124,5 @@ containerMain.addEventListener("click", function (event) {
   //
   // TODO: Add code to display the current date in the header of the page.
 
+  let date = dayjs().format('dddd, MMMM D, YYYY');
+$('#currentDay').text(date);
