@@ -32,6 +32,9 @@ THEN the events will be stored and can be viewed when revisted
 
 ```
 
-### Screenshot
+## Screenshots
 
-https://drive.google.com/file/d/1rxMys-D2ugcfO2X1rhHdnLiBkuhi87Fu/view?usp=drive_link
+The following images reflect the functionality and final results of development for this deployed application:
+
+This is an image showing the Work Day Scheduler
+![Image showing the Work Day Scheduler](./assets/workDayScheduler.png)
